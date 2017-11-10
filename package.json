@@ -1,0 +1,34 @@
+{
+  "name": "markdown",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-hot-loader": "^3.1.2",
+    "styled-components": "^2.2.3"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.2.15",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
