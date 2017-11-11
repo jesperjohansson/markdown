@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { update } from '../../actions/Editor';
 
 const Container = styled.div`
-  flex-grow: 1;
-  width: 50%;
+  width: ${props => props.hasResized ? 'auto' : '50%'};
   height: 100%;
+  max-height: 100vh;
 `;
 
 const TextArea = styled.textarea`
@@ -19,18 +19,56 @@ const TextArea = styled.textarea`
   border: none;
   border-right: 1px solid #ccc;
   outline: none;
-  resize: none;
+  resize: horizontal;
 `;
 
 class Editor extends React.Component {
+  state = {
+    hasResized: false,
+  }
+
+  componentDidMount() {
+    this.events(true);
+  }
+
+  isMouseDown = false
+  textareaWidth = undefined
+
+  events(bind = true) {
+    if (bind) {
+      this.textarea.addEventListener('mousedown', this.handleMouseDown);
+      this.textarea.addEventListener('mouseup', this.handleMouseUp);
+      this.textarea.addEventListener('mousemove', this.handleMouseMove);
+    } else {
+      this.textarea.removeEventListener('mousedown', this.handleMouseDown);
+      this.textarea.removeEventListener('mouseup', this.handleMouseUp);
+      this.textarea.removeEventListener('mousemove', this.handleMouseMove);
+    }
+  }
+
+  handleMouseDown = () => {
+    this.isMouseDown = true;
+    this.textareaWidth = this.textarea.offsetWidth;
+  }
+
+  handleMouseUp = () => {
+    this.isMouseDown = false;
+  }
+
+  handleMouseMove = () => {
+    if (!this.isMouseDown || this.textarea.offsetWidth === this.textareaWidth) return;
+    this.setState({ hasResized: true }, this.events(false));
+  }
+
   handleChange = ({ target }) => {
     this.props.update(target.value);
   }
 
   render() {
     return (
-      <Container>
+      <Container hasResized={this.state.hasResized}>
         <TextArea
+          innerRef={(ref) => { this.textarea = ref; }}
           autoFocus
           onInput={this.handleChange}
         />

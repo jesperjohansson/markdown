@@ -5,13 +5,14 @@ import Formatter from './Formatter';
 
 const Container = styled.div`
   flex-grow: 1;
-  width: 50%;
+  flex-basis: 50%;
   background-color: #f4f4f4;
 `;
 
 const Html = styled.div`
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 `;
 
 const inject = htmlString => ({
