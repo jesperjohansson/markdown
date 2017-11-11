@@ -13,7 +13,17 @@ const store = createStore(
   /* eslint-enable */
 );
 
-const GlobalStyles = injectGlobal`
+/* eslint-disable */
+injectGlobal`
+  @font-face {
+    font-family: 'Fira Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Fira Mono Regular'), local('FiraMono-Regular'),
+      url('static/fonts/fira-mono-v6-latin-regular.woff2') format('woff2'),
+      url('static/fonts/fira-mono-v6-latin-regular.woff') format('woff');
+  }
+
   html,
   body,
   .app {
@@ -22,10 +32,17 @@ const GlobalStyles = injectGlobal`
     height: 100%;
   }
 
+  body {
+    font-family: 'Fira Mono', serif;
+    font-size: 16px;
+    line-height: 1em;
+  }
+
   .app {
     display: flex;
   }
 `;
+/* eslint-enable */
 
 const Container = styled.main`
   display: flex;

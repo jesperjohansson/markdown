@@ -10,6 +10,7 @@ const Container = styled.div`
 `;
 
 const Html = styled.div`
+  padding: 10px;
   width: 100%;
   height: 100%;
   overflow-y: scroll;

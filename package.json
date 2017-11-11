@@ -2,7 +2,8 @@
   "name": "markdown",
   "version": "0.0.1",
   "scripts": {
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "prod": "webpack --config webpack.config.production.js"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -28,6 +29,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
+    "copy-webpack-plugin": "^4.2.0",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",

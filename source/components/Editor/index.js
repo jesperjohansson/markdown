@@ -12,13 +12,16 @@ const Container = styled.div`
 const TextArea = styled.textarea`
   appearance: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   display: block;
   width: 100%;
   height: 100%;
   border: none;
   border-right: 1px solid #ccc;
   outline: none;
+  font-family: 'Fira Mono', serif;
+  font-size: 1rem;
+  line-height: 1em;
   resize: horizontal;
 `;
 
