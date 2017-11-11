@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
+import Formatter from './Formatter';
 
 const Container = styled.div`
   flex-grow: 1;
@@ -8,9 +9,20 @@ const Container = styled.div`
   background-color: #f4f4f4;
 `;
 
+const Html = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+const inject = htmlString => ({
+  __html: htmlString,
+});
+
 const Previewer = props => (
   <Container>
-    {props.content}
+    <Html
+      dangerouslySetInnerHTML={inject(Formatter.format(props.content))}
+    />
   </Container>
 );
 
