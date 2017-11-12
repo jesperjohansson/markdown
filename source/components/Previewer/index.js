@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled, { injectGlobal } from 'styled-components';
 import Formatter from './Formatter';
@@ -31,6 +32,14 @@ const Previewer = props => (
     />
   </Container>
 );
+
+Previewer.defaultProps = {
+  content: '',
+};
+
+Previewer.propTypes = {
+  content: PropTypes.string,
+};
 
 const mapStateToProps = state => ({
   content: state.Editor.content,

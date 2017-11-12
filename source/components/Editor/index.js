@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { update } from '../../actions/Editor';
@@ -28,6 +29,10 @@ const TextArea = styled.textarea`
 `;
 
 class Editor extends React.Component {
+  static propTypes = {
+    update: PropTypes.func.isRequired,
+  }
+
   state = {
     hasResized: false,
   }
