@@ -38,6 +38,12 @@ injectGlobal`
     line-height: 1em;
   }
 
+  body,
+  div,
+  textarea {
+    box-sizing: border-box;
+  }
+
   .app {
     display: flex;
   }
