@@ -14,4 +14,6 @@ const render = (Component) => {
 
 render(Main);
 
-if (module.hot) module.hot.accept('./components/Main', () => render(Main));
+/* eslint-disable */
+if (module.hot) module.hot.accept('./components/Main', () => render(require('./components/Main').default));
+/* eslint-enable */
