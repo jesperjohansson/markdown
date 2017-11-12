@@ -9,7 +9,7 @@ injectGlobal`${Styling}`; // eslint-disable-line
 const Container = styled.div`
   flex-grow: 1;
   flex-basis: 50%;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 `;
 
 const Html = styled.article`

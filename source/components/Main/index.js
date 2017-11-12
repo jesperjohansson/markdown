@@ -39,6 +39,8 @@ injectGlobal`
   }
 
   body,
+  main,
+  article,
   div,
   textarea {
     box-sizing: border-box;

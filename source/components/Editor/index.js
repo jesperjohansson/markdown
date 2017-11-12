@@ -16,12 +16,14 @@ const TextArea = styled.textarea`
   display: block;
   width: 100%;
   height: 100%;
+  min-width: 200px;
   border: none;
   border-right: 1px solid #ccc;
   outline: none;
   font-family: 'Fira Mono', serif;
   font-size: 1rem;
-  line-height: 1em;
+  line-height: 1.5em;
+  background-color: #f4f4f4;
   resize: horizontal;
 `;
 
@@ -74,6 +76,7 @@ class Editor extends React.Component {
           innerRef={(ref) => { this.textarea = ref; }}
           autoFocus
           onInput={this.handleChange}
+          spellCheck="false"
         />
       </Container>
     );
