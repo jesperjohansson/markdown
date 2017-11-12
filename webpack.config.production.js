@@ -11,11 +11,6 @@ module.exports = {
     publicPath: '/',
   },
   devtool: 'source-map',
-  module: {
-    rules: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' },
-    ],
-  },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new CopyWebpackPlugin([
@@ -27,4 +22,22 @@ module.exports = {
       comments: false,
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: 'raw-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          plugins: [
+            'react-hot-loader/babel',
+          ],
+        },
+      },
+    ],
+  },
 };
