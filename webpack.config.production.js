@@ -21,6 +21,10 @@ module.exports = {
       sourceMap: true,
       comments: false,
     }),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'production',
+      DEBUG: false,
+    }),
   ],
   module: {
     rules: [

@@ -9,7 +9,7 @@ import Previewer from '../Previewer';
 const store = createStore(
   reducers,
   /* eslint-disable */
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  process.env.DEBUG ? (window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()) : undefined,
   /* eslint-enable */
 );
 
