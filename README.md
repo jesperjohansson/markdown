@@ -1,6 +1,15 @@
 # Markdown ✍️
 A simple browser based markdown editor, based on React and Redux.
 
+### Demo version
+[https://jesper-johansson.github.io/markdown/](https://jesper-johansson.github.io/markdown/)
+
+### Manual build
+`git clone git@github.com:jesper-johansson/markdown.git && cd markdown`<br>
+`yarn` or `npm install`<br>
+`yarn prod` or `npm run prod`<br>
+`open dist` and then open `index.html` in your browser
+
 ### Features
 - Real time preview ✅
 - Resizable editor ✅
@@ -10,6 +19,7 @@ A simple browser based markdown editor, based on React and Redux.
 ### Upcoming features
 - File saving (WIP)
 - Editor preferences
+  - Option for inserting `<br>` on Enter
 - Toolbar
 - Tabs
 - Desktop app
