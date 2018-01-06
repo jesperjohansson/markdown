@@ -16,14 +16,6 @@ A simple browser based markdown editor, based on React and Redux.
 - Side-by-side editing ✅
 - Github-like styling ✅
 
-### Upcoming features
-- File saving (WIP)
-- Editor preferences
-  - Option for inserting `<br>` on Enter
-- Toolbar
-- Tabs
-- Desktop app
-
 ### Screenshots
 ![screenshot](https://i.imgur.com/ZigV27W.png "Screenshot")
 
