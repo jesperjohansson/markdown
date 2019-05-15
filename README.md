@@ -2,7 +2,7 @@
 A simple browser based markdown editor, based on React and Redux.
 
 ### Demo version
-[https://jesper-johansson.github.io/markdown/](https://jesper-johansson.github.io/markdown/)
+[https://markdown.jesperjohansson.io//](https://markdown.jesperjohansson.io/)
 
 ### Manual build
 `git clone git@github.com:jesper-johansson/markdown.git && cd markdown`<br>
